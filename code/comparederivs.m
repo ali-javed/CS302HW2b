@@ -1,5 +1,4 @@
 function comparederivs(allx,f,truedf)
-%testing github
 % COMPAREDERIVS: % Compares true, 1st-order, and 2nd-order slope approximations
 % function comparederivs(allx,f,truedf)
 %
