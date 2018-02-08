@@ -45,7 +45,7 @@ for xi=1:length(allx) %each x gets its own plot
     err2=abs(df-df2);
 
     % PLOT THE APPROXIMATION ERRORS AS A FUNCTION OF STEPSIZE
-    figure
+    fig = figure
     loglog(h,err1,'ro',h,err2,'b*');
     
     % LINEAR REGRESSION OF LOG-LOG RELATIONSHIPS (ONLY IN REGION GOVERNED BY TRUNCATION ERROR)
@@ -65,6 +65,8 @@ for xi=1:length(allx) %each x gets its own plot
         'Location','BestOutside');
     title(['at x = ',num2str(x)])
     
+    saveas(fig,'../figures/fig.png')
+
     %ALLOW USER TO VIEW EACH PLOT BEFORE MOVING ON TO THE NEXT
     if xi<length(allx)
         disp('Hit any key to continue...')
